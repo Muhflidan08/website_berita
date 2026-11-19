@@ -1,0 +1,412 @@
+/* ===== WebTa - style.css (versi simpel) ===== */
+
+:root {
+    --brand: #ffae00;
+    --text: #222;
+    --muted: #777;
+    --line: #e5e5e5;
+    --bg: #ffffff;
+    --soft: #f6f6f6;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text);
+}
+
+a:hover {
+    color: #b87a00;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+small {
+    font-size: 12px;
+}
+
+/* ===== Header ===== */
+
+header {
+    background: var(--bg);
+    border-bottom: 1px solid var(--line);
+    padding-top: 12px;
+}
+
+.nav-main {
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.navi {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.navi img {
+    max-width: 100%;
+}
+
+.search-bar {
+    width: 280px;
+    max-width: 100%;
+    padding: 9px 16px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.search-bar:focus {
+    border-color: var(--brand);
+}
+
+.btn-primary {
+    padding: 0;
+    margin: 0;
+}
+
+.btn-primary button {
+    padding: 8px 20px;
+    border: 2px solid var(--brand);
+    border-radius: 20px;
+    background: var(--bg);
+    color: #000;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-primary button:hover {
+    background: var(--brand);
+}
+
+/* ===== Navigasi ===== */
+
+.navbar {
+    margin-top: 12px;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+    list-style: none;
+    margin: 0;
+    padding: 8px;
+    background: var(--brand);
+    border-radius: 4px;
+}
+
+.nav-list li a {
+    display: block;
+    padding: 6px 16px;
+    color: #000;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 4px;
+}
+
+.nav-list li a:hover {
+    background: rgba(255, 255, 255, 0.45);
+    color: #000;
+}
+
+marquee {
+    display: block;
+    margin-top: 10px;
+    padding: 6px;
+    background: #222;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+/* ===== Halaman utama (index) ===== */
+
+.mn-sb {
+    display: grid;
+    grid-template-columns: 1fr 250px;
+    gap: 30px;
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 25px 15px 0;
+}
+
+.gap {
+    display: none;
+}
+
+.mn-ctn {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+    align-content: start;
+    width: auto;
+}
+
+.mn-ctn h3 {
+    grid-column: 1 / -1;
+    margin: 0;
+    text-align: left !important;
+    font-size: 20px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--brand);
+}
+
+.img-mn {
+    padding: 0;
+    font-size: 14px;
+}
+
+.img-mn img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 6px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.img-mn p {
+    font-weight: 600;
+    line-height: 1.35;
+}
+
+.img-mn small {
+    display: inline;
+    color: var(--muted);
+}
+
+.small-col {
+    color: #b87a00;
+    font-size: 12px;
+    font-style: normal;
+    margin-left: 8px;
+}
+
+/* Sidebar topik utama */
+
+.utm {
+    align-self: start;
+    width: auto;
+    margin: 0;
+    padding: 15px 18px;
+    background: var(--soft);
+    border-top: 3px solid var(--brand);
+    border-radius: 4px;
+}
+
+.utm h3 {
+    margin: 0 0 6px;
+    font-size: 18px;
+}
+
+.topik div {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-list1 {
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+}
+
+.nav-list1 li {
+    list-style: none;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--line);
+}
+
+.nav-list1 li:last-child {
+    border-bottom: none;
+}
+
+.nav-list1 a {
+    color: var(--text);
+}
+
+.nav-list1 a:hover {
+    color: #b87a00;
+}
+
+/* ===== Halaman daftar berita (Terbaru, Olahraga, dll) ===== */
+
+.container {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 25px 15px 0;
+    text-align: left;
+}
+
+.container h2 {
+    margin: 0 0 5px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--brand);
+    font-size: 24px;
+}
+
+.img-box {
+    width: 100%;
+    margin: 0;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--line);
+}
+
+.img-box a {
+    display: block;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.img-box img {
+    width: 100% !important;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 6px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.img-box p {
+    font-size: 18px;
+    line-height: 1.35;
+}
+
+.img-box small {
+    color: var(--muted);
+    font-weight: 400;
+}
+
+/* ===== Halaman artikel ===== */
+
+.container-1 {
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 25px 15px 0;
+    font-weight: 400;
+}
+
+.container-1 h2 {
+    text-align: left;
+    font-size: 26px;
+    line-height: 1.3;
+    margin: 0 0 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--brand);
+}
+
+.img-box-ctn {
+    width: 100%;
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.75;
+}
+
+.img-box-ctn img {
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 18px auto 6px;
+    border-radius: 6px;
+}
+
+.img-box-ctn small {
+    display: block;
+    padding: 0 0 12px;
+    margin: 0;
+    color: var(--muted);
+    font-style: italic;
+    text-align: center;
+}
+
+.img-box-ctn p {
+    font-weight: 400;
+    padding-top: 10px;
+}
+
+.img-box-ctn h3 {
+    margin: 20px 0 8px;
+    font-size: 20px;
+}
+
+.img-box-ctn ol {
+    margin: 8px 0 16px;
+    padding-left: 22px;
+}
+
+/* ===== Footer ===== */
+
+footer {
+    width: 100%;
+    margin-top: 60px;
+    background: var(--brand);
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+    padding: 14px 10px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* ===== Layar kecil (HP) ===== */
+
+@media (max-width: 768px) {
+    .mn-sb {
+        grid-template-columns: 1fr;
+    }
+
+    .mn-ctn {
+        grid-template-columns: 1fr;
+    }
+
+    .navi {
+        justify-content: center;
+    }
+
+    .search-bar {
+        width: 100%;
+    }
+
+    .form-inputext {
+        width: 100%;
+    }
+
+    .img-box img {
+        height: 200px;
+    }
+}
